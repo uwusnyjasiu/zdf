@@ -1,0 +1,88 @@
+body {
+	background-color: #cfe8ff;
+}
+
+#ambulance {
+	/* TODO: dodaj rozmiar, ramkę, zaokrąglenia, stylowanie napisu i gradient w tle */
+	width: 500px;
+	height: 300px;
+	border: 1px solid black;
+	border-radius: 200px 5px 10px 20px;
+	text-align: center;
+	color: red;
+	font-family: monospace;
+	font-size: 64px;
+	background: linear-gradient(0deg, #ffffff 0%, #ffffff 20%, #e30613 20%, #e30613 40%, #ffffff 40%, #ffffff 60%, #2706e3 60%, #2706e3 100%, #ffffff 80%, #ffffff 100%);
+}
+
+.wheel {
+	/* TODO: zrób z kwadratu koło z grubą ramką i uruchom animację spin */
+	width: 90px;
+	height: 90px;
+	background-color: #e8e8e8;
+	border-radius: 100px;
+	text-align: center;
+	animation: spin 1s linear infinite;
+}
+
+#wheel-front {
+	/* TODO: ustaw pozycję przedniego koła */
+	position: relative;
+	bottom: 70px;
+	left: 90px;
+}
+
+#wheel-back {
+	/* TODO: ustaw pozycję tylnego koła */
+	position: relative;
+	bottom: 150px;
+	left: 350px;
+}
+
+@keyframes spin {
+	/* TODO: opisz pełny obrót od 0 do 360 stopni */
+	from{transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+}
+
+#siren {
+	/* TODO: nadaj syrenie rozmiar, czarne tło i zaokrąglony górny brzeg */
+	position: relative;
+	left: 200px;
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	border-radius: 50px 50px 5px 5px;
+}
+
+#siren:hover {
+	/* TODO: uruchom animację siren po najechaniu myszką */
+	animation: siren 0.5s infinite;
+}
+
+@keyframes siren {
+	/* TODO: opisz zmianę koloru tła od czarnego, przez niebieski, do czerwonego */
+	0%{background-color: red;}
+	25%{background-color: blue;}
+	75%{background-color: red;}
+}
+
+#emergency {
+	/* TODO: ustaw czerwoną tabliczkę z niebieską ramką i włącz płynne przejście */
+	position: absolute;
+	right: 30%;
+	top: 200px;
+	padding: 20px;
+	background: red;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	border: 2px black solid;
+	border-radius: 10px;
+	transition: transform 1s;
+}
+
+#emergency:hover {
+	/* TODO: powiększ tabliczkę po najechaniu myszką */
+	transform: scale(1.5);
+}
